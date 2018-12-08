@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <meta name="description" content="Pokedex created for Create 3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#e85e00">
+    <meta name="theme-color">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <!-- <link rel="stylesheet" href="css/simple.css"> -->
+
+    <script src="js/autocomplete.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+    <section class="o-navigation-top">
+        <form autocomplete="off">
+            <button type="button" onclick="randomPokemon();return false;" class="navigation-top-button desktopbutton"><i class="fa fa-random"></i> Random</button>
+            <button type="button" onclick="randomPokemon();return false;" class="navigation-top-button mobilebutton"><i class="fa fa-random"></i></button>
+            <button id="myBtn" type="submit" onclick="getPokemon();return false;" class="navigation-top-button "><i class="fa fa-search"></i></button>
+            <div class="autocomplete" style="width:220px;">
+                <input id="myInput" type="text" value="" name="myPokemon" placeholder="Search">
+            </div>
+        </form>
+    </section>
+    <section class="o-info">
+        <div class="o-container">
+            <div class="o-info-title">
+                <h1 class="o-info-title-content" id="pokemonName"></h1>
+                <h2 class="o-info-title-content" id="pokemonNum"></h2>
+            </div>
+            <div class="o-info-content">
+                <div class="o-info-content-image">
+                    <img id="pokemonPicture" src="" alt="Picture of pokemon">
+                </div>
+                <div class="o-info-content-details">
+                    <div class="o-info-content-details-column">
+                        <h3>Height:</h3>
+                        <p id="pokemonHeight"></p>
+                        <h3>Weight:</h3>
+                        <p id="pokemonWeight"></p>
+                    </div>
+                    <div class="o-info-content-details-column">
+                        <h3 class="o-info-content-details-column-weaktype-type">Type:</h3>
+                        <div class="o-info-content-details-column-weaktype" id="div1">
+                        </div>
+                        <!-- <p id="pokemonType"></p> -->
+                        <h3 class="o-info-content-details-column-weaktype-type">Weaknesses:</h3>
+                        <div class="o-info-content-details-column-weaktype" id="div2">
+                        </div>
+                        <!-- <p id="pokemonWeaknesses"></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="o-info-evolutions">
+                <h2 class="o-evolutions-title">Evolutions</h2>
+                <div id="evolutions" class="o-evolutions-evol">
+                    <div class="o-evolutions-containers">
+                        <h3>Previous</h3>
+                        <div id="prevolutions" class="o-evolutions-pokemons"></div>
+                    </div>
+                    <div class="o-evolutions-containers">
+                        <h3>Next</h3>
+                        <div id="nextevolutions" class="o-evolutions-pokemons"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="o-navigation-bottom">
+                <button type="button" onclick="previousPokemon();return false;" class="navigation-bottom-button button-prev">&laquo; Previous</button>
+                <button type="button" onclick="nextPokemon();return false;" class="navigation-bottom-button button-next">Next &raquo;</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

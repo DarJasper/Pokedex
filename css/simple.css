@@ -1,0 +1,177 @@
+html {
+  font-family: 'Inter UI', sans-serif;
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-size: 16px;
+    background-color: #cdcdcd;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #dfdfdf;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 80%;
+}
+
+button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 16px;
+  transition: transform .1s;
+
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.o-navigation-top {
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.navigation-top-button {
+  margin-right: 0px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 11px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.navigation-bottom-button {
+  margin-right: 0px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 11px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* .button-next {
+    background-color: #0068A0;
+}
+
+.button-prev {
+    background-color: #0091AA;
+} */
+
+
+.o-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+}
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px 60px 25px ;
+}
+
+.o-navigation-bottom {
+  display:flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.o-info-title {
+  display: flex;
+  flex-direction: row;
+  color: #192149;
+  font-size: 25px;
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.o-info-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.o-info-content-image {
+  border: 2px solid #192149;
+  border-radius: 25px;
+  margin-right: 15px;
+  padding: 15px;
+  background-color: #dfdfdf;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  display:block;
+  margin:auto;
+  align-self: flex-start;
+}
+
+.o-info-title-content {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.o-info-content-details {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #192149;
+  background-color: #dfdfdf;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  color: #192149;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.o-info-content-details-column {
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.o-info-content-details-column-weaktype{
+  display: flex;
+  flex-direction: row;
+}
+
+.o-info-content-details-column-weaktype p{
+  margin-right: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

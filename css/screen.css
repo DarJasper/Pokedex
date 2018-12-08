@@ -1,0 +1,325 @@
+html {
+    font-family: 'Inter UI', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #cdcdcd;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #dfdfdf;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+    width: 100px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: 008CBA;
+    color: #fff;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #008CBA !important;
+    color: #ffffff;
+}
+
+button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 16px;
+    transition: transform .1s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.o-navigation-top {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+    .o-navigation-top {
+        margin-top: 80px;
+        margin-left: 30px;
+    }
+}
+
+.navigation-top-button {
+    margin-right: 0px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 11px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.navigation-bottom-button {
+    margin-right: 4px;
+    margin-left: 4px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 11px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* .button-next {
+    background-color: #0068A0;
+}
+
+.button-prev {
+    background-color: #0091AA;
+} */
+.o-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .o-container {
+        padding: 30px 25px 20px 25px;
+    }
+}
+
+.o-navigation-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.o-info-title {
+    display: flex;
+    flex-direction: row;
+    color: #192149;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+@media (min-width: 992px) {
+    .o-info-title {
+        font-size: 25px;
+    }
+}
+
+.o-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .o-info-content {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.o-info-content-image {
+    border: 2px solid #192149;
+    border-radius: 25px;
+    margin-right: 15px;
+    padding: 15px;
+    background-color: #dfdfdf;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    display: block;
+    margin: auto;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.o-info-title-content {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    .o-info-title-content {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.o-info-content-details {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #192149;
+    background-color: #dfdfdf;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    color: #192149;
+    border-radius: 15px;
+    margin: 10px;
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+}
+
+@media (min-width: 992px) {
+    .o-info-content-details {
+        zoom: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+.o-info-content-details-column {
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.o-info-content-details-column-weaktype {
+    display: flex;
+    flex-direction: row;
+}
+
+.o-info-content-details-column-weaktype p {
+    margin-right: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.o-info-evolutions {
+    text-align: center;
+}
+
+.o-evolutions-title {
+    color: #192149;
+}
+
+.o-evolutions-evol {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #192149;
+    background-color: #dfdfdf;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    color: #192149;
+    border-radius: 15px;
+    margin: 10px;
+    margin-top: 0px;
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+}
+
+@media (min-width: 992px) {
+    .o-evolutions-evol {
+        display: flex;
+        flex-direction: row;
+        zoom: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+.o-evolutions-containers {
+    text-align: center;
+    min-width: 250px;
+}
+
+.o-evolutions-pokemons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.o-evolutions-pokemons {
+    display: flex;
+    text-align: center;
+}
+
+.evolutions-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.evolutions-container p {
+    margin-top: 0px;
+}
+
+.desktopbutton {
+    display: none;
+}
+
+.mobilebutton {
+    display: inline;
+}
+
+@media (min-width: 579px) {
+    .desktopbutton {
+        display: inline;
+    }
+
+    .mobilebutton {
+        display: none;
+    }
+}
